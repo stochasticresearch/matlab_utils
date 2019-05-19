@@ -174,7 +174,8 @@ else
 		colormap(jet);
 	end
 	if ~isempty(bw_legend) && ~strcmp(legend_type, 'axis')
-		handles.legend = legend(bw_legend, 'location', 'best', 'fontsize',legendTextSize);
+        bw_legend
+		handles.legend = legend(bw_legend, 'location', 'best', 'fontsize',legendTextSize, 'AutoUpdate', 'off');
 		legend boxoff;
 	else
 		handles.legend = [];
